@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Wolaita | forWolaita.org</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBFCF8;--surface:#FFFFFF;--tint:#E8F1E8;--ink:#14251B;--muted:#4A5C50;--green:#1F5B3A;--green-d:#14412A;--sun:#F2B72B;--on-sun:#14251B;--on-green:#FFFFFF;--line:#D5E0D5;--red:#B3382C;
+--serif:'Bitter',Georgia,serif;--sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A13;--surface:#16251B;--tint:#1B2E22;--ink:#EEF3EC;--muted:#A9BBAE;--green:#6FC08F;--green-d:#A8DFBC;--line:#2B4033;--on-green:#0F1A13;--red:#E4786C}}
+:root[data-theme="dark"]{--bg:#0F1A13;--surface:#16251B;--tint:#1B2E22;--ink:#EEF3EC;--muted:#A9BBAE;--green:#6FC08F;--green-d:#A8DFBC;--line:#2B4033;--on-green:#0F1A13;--red:#E4786C}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans)}
+h1,h2,h3{font-family:var(--serif);line-height:1.2;margin:0 0 .5em;font-weight:700}
+h1{font-size:clamp(2.2rem,6vw,3.8rem)}h2{font-size:clamp(1.6rem,4vw,2.3rem)}h3{font-size:1.2rem}
+p{margin:0 0 1em;max-width:62ch}a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.logo{font:700 1.25rem var(--serif);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:28px;height:28px;border-radius:50%;background:conic-gradient(var(--green) 0 33%,var(--sun) 0 66%,var(--red) 0)}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem}nav a:hover{color:var(--green)}
+.btn{display:inline-block;background:var(--sun);color:var(--on-sun);font-weight:600;padding:13px 26px;border-radius:999px;text-decoration:none;border:2px solid var(--sun);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
+nav .btn{padding:9px 20px}
+.hero{background:var(--green-d);color:#fff;padding:84px 0 72px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:linear-gradient(90deg,#1F5B3A 33.3%,#F2B72B 33.3% 66.6%,#B3382C 66.6%)}
+.hero p{font-size:1.15rem;color:#E2EEE4}
+.hero .btn.alt{color:#fff;border-color:#fff}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card .ic{font-size:1.8rem;display:block;margin-bottom:8px}
+.tint{background:var(--tint)}
+.split{display:grid;gap:36px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
+.stats{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.stat{background:var(--surface);border-left:5px solid var(--sun);padding:16px 18px;border-radius:6px}
+.stat b{display:block;font:700 1.6rem var(--serif);color:var(--green)}
+.stat span{font-size:.92rem;color:var(--muted)}
+.donate{background:var(--green-d);color:#fff;border-radius:18px;padding:40px 28px}
+.donate p{color:#E2EEE4}
+.amts{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.amts a{flex:1 1 130px;text-align:center;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.35);color:#fff;border-radius:12px;padding:14px 10px;text-decoration:none;font-weight:600}
+.amts a:hover{background:var(--sun);color:var(--on-sun);border-color:var(--sun)}
+.amts small{display:block;font-weight:400;font-size:.8rem;opacity:.85}
+form{display:grid;gap:14px;max-width:520px}
+label{font-weight:600;font-size:.95rem}
+input,textarea{width:100%;font:inherit;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);margin-top:4px}
+#msg{color:var(--green);font-weight:600;min-height:1.5em}
+footer{background:var(--ink);color:var(--bg);padding:40px 0;font-size:.92rem}
+footer a{color:var(--sun)}
+.fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+@media (max-width:720px){nav a:not(.btn){display:none}section{padding:48px 0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#top"><i aria-hidden="true"></i>For Wolaita</a>
+<nav><a href="#about">About</a><a href="#work">Our work</a><a href="#involved">Get involved</a><a href="#contact">Contact</a><a class="btn" href="https://forwolaita.org/donate" target="_blank" rel="noopener">Donate</a></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<h1>Stronger families.<br>Thriving Wolaita.</h1>
+<p>For Wolaita is a community organization working with the people of Wolaita, Ethiopia on education, clean water, health and livelihoods.</p>
+<div class="cta"><a class="btn" href="#donate">Donate now</a><a class="btn alt" href="#involved">Volunteer with us</a></div>
+</div></section>
+
+<section id="about"><div class="wrap split">
+<div><h2>Local people. Local solutions.</h2>
+<p>We believe lasting change in Wolaita starts with the community itself. We listen to families, farmers, teachers and youth, then support the projects they choose.</p>
+<p>Every program is shaped with local leaders, and every donation is tracked and reported back to supporters.</p></div>
+<div class="stats">
+<div class="stat"><b>4</b><span>focus areas</span></div>
+<div class="stat"><b>100%</b><span>community-led projects</span></div>
+<div class="stat"><b>Open</b><span>reporting to donors</span></div>
+<div class="stat"><b>Local</b><span>staff and volunteers</span></div>
+</div></div></section>
+
+<section id="work" class="tint"><div class="wrap">
+<h2>What we do</h2>
+<div class="grid">
+<div class="card"><span class="ic" aria-hidden="true">📚</span><h3>Education</h3><p>School supplies, scholarships and support for teachers so every child can learn.</p></div>
+<div class="card"><span class="ic" aria-hidden="true">💧</span><h3>Clean water</h3><p>Protecting springs and building water points close to homes and schools.</p></div>
+<div class="card"><span class="ic" aria-hidden="true">🩺</span><h3>Health</h3><p>Health education, maternal care and access to basic medicine in rural areas.</p></div>
+<div class="card"><span class="ic" aria-hidden="true">🌱</span><h3>Livelihoods</h3><p>Farming training, seeds and small-business support for women and youth.</p></div>
+</div></div></section>
+
+<section id="donate"><div class="wrap"><div class="donate">
+<h2>Give to Wolaita today</h2>
+<p>Your gift goes directly to community projects. Choose an amount to continue to our secure donation page.</p>
+<div class="amts">
+<a href="https://forwolaita.org/donate?amount=25" target="_blank" rel="noopener">$25<small>School supplies</small></a>
+<a href="https://forwolaita.org/donate?amount=50" target="_blank" rel="noopener">$50<small>Clean water access</small></a>
+<a href="https://forwolaita.org/donate?amount=100" target="_blank" rel="noopener">$100<small>Health outreach</small></a>
+<a href="https://forwolaita.org/donate?amount=250" target="_blank" rel="noopener">$250<small>Farming support</small></a>
+</div>
+<a class="btn" href="https://forwolaita.org/donate" target="_blank" rel="noopener">Donate any amount</a>
+</div></div></section>
+
+<section id="involved" class="tint"><div class="wrap">
+<h2>Other ways to help</h2>
+<div class="grid">
+<div class="card"><h3>Volunteer</h3><p>Share your skills in teaching, health, tech or fundraising, in person or online.</p></div>
+<div class="card"><h3>Partner</h3><p>Schools, churches, businesses and organizations can sponsor a project.</p></div>
+<div class="card"><h3>Spread the word</h3><p>Share our page with friends and family in the diaspora and beyond.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap split">
+<div><h2>Contact us</h2><p>Questions, partnerships or volunteer offers? Send us a note and we will reply by email.</p>
+<p>Email: <a href="mailto:info@forwolaita.org">info@forwolaita.org</a></p></div>
+<form id="f">
+<div><label for="n">Your name</label><input id="n" required></div>
+<div><label for="e">Email</label><input id="e" type="email" required></div>
+<div><label for="m">Message</label><textarea id="m" rows="4" required></textarea></div>
+<button class="btn" type="submit">Send message</button>
+<div id="msg" role="status"></div>
+</form></div></section>
+</main>
+
+<footer><div class="wrap fl">
+<div>© 2026 For Wolaita · <a href="https://forwolaita.org">forWolaita.org</a></div>
+<div><a href="https://forwolaita.org/donate" target="_blank" rel="noopener">Donate</a></div>
+</div></footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(ev){
+ev.preventDefault();
+var n=document.getElementById('n').value;
+var a='mailto:info@forwolaita.org?subject='+encodeURIComponent('Message from '+n)+'&body='+encodeURIComponent(document.getElementById('m').value);
+document.getElementById('msg').textContent='Thank you, '+n+'. Opening your email app to send.';
+window.location.href=a;
+});
+</script>
+</body>
+</html>
